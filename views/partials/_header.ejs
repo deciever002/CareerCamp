@@ -1,0 +1,26 @@
+<nav class="navbar">
+    <div class="navbar-logo">
+        <a href="/" class="logo-name">Career Camp</a>
+    </div>
+    <% if(locals.user) { %>
+        <div class="navbar-links">
+            <a href="/" class="nav-link">Home</a>
+            <a href="/student/add-student" class="nav-link">Add Student</a>
+            <a href="/student/list-students" class="nav-link">List Students</a>
+            <a href="/interview/list-interviews" class="nav-link">List Interviews</a>
+            <a href="/interview/add-schedule-interview" class="nav-link">Add/Schedule Interview</a>
+            <a href="/download-results" class="nav-link">Download Results(CSV)</a>
+        </div>
+    <% } %>
+    <% if(locals.user) { %>
+        <div class="navbar-buttons">
+            <a href="/user/profile" class="btn"><%= user.name %></a>
+            <a href="/user/destroy-session" class="btn btn-signup"> Logout </a>
+        </div>
+    <% } else { %>
+        <div class="navbar-buttons">
+            <a href="/user/signin" class="btn btn-signin"> Sign In</a>
+            <a href="/user/signup" class="btn btn-signup"> Sign Up </a>
+        </div>
+    <% } %>
+</nav>

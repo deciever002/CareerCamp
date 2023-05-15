@@ -1,0 +1,18 @@
+<footer class="footer">
+    <% if(locals.user) { %>
+        <div class="footer-links">
+        <a href="#" class="footer-link">Home</a>
+        <a href="/student/add-student" class="footer-link">Add Student</a>
+        <a href="/student/list-students" class="footer-link">List Students</a>
+        <a href="/interview/list-interviews" class="footer-link">List Interviews</a>
+        <a href="/interview/add-schedule-interview" class="footer-link">Add/Schedule Interview</a>
+        </div>
+    <%  } else { %>
+        <a href="/user/signin" class="footer-link">Sign In</a>
+        <a href="/user/signup" class="footer-link">Sign Up</a>
+    <% } %>
+    <div class="footer-copyright">
+      &copy; 2023 Career Camp. All rights reserved.
+    </div>
+</footer>
+  

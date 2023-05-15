@@ -1,0 +1,20 @@
+* {
+    font-family: sans-serif;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.center{
+    text-align: center;
+}
+
+body{
+    height: 100vh;
+}
+
+a{
+    text-decoration: none;
+}
+a:visited{
+    color: inherit;
+}

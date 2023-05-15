@@ -1,0 +1,19 @@
+.launch-page{
+    align-items: center;
+    background-image: url('/images/home_bg.jpg');
+    height: 90%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.9;
+}
+
+.launch-page h1{
+    padding: 50px;
+    font-size: 60px;
+    color: black;
+}
+
+.launch-page p{
+    color: black;
+}

@@ -1,0 +1,49 @@
+<link rel="stylesheet" href="/css/add-schedule-interview.css">
+<div class="form-wrapper">
+<div class="form-container">
+  <h1>Add Interview</h1>
+  <% if(locals.students.length > 0 ) { %>
+  <form action="/interview/create-interview" method="post">
+    <div class="form-group">
+      <label for="companyName">Company Name:</label>
+      <input type="text" id="companyName" name="companyName" required />
+    </div>
+    <div class="form-group">
+      <label for="date">Date:</label>
+      <input type="date" id="date" name="date" required />
+    </div>
+    <button type="submit">Add Interview</button>
+  </form>
+  <% } else { %>
+    <p>There are no <b>students</b> to create an <b>interviw</b> first add students</p>
+  <% } %>
+</div>
+<div class="form-container">
+  <h1>Schedule Interview</h1>
+  <% if(locals.students.length > 0  && locals.interviews.length > 0) { %>
+    <form action="/interview/schedule-interview" method="post">
+      <div class="form-group">
+        <label for="students-list">Select Student:</label>
+        <select id="student-id" name="studentId" required>
+          <option value="">Please select a Student</option>
+          <% locals.students.forEach(function(item) { %>
+            <option value="<%= item._id %>"><%= item.id %> <%= item.name %></option>
+          <% }); %>
+          </select>
+      </div>
+      <div class="form-group">
+        <label for="interview-list">Select Interview:</label>
+        <select id="interview-id" name="interviewId" required>
+          <option value="">Please select a Interview of Company</option>
+          <% locals.interviews.forEach(function(item) { %>
+            <option value="<%= item._id %>"><%= item.companyName %></option>
+          <% }); %>
+          </select>
+      </div>
+      <button type="submit">Schedule Interview</button>
+    </form>
+  <% } else { %>
+    <p>There are either no <b>students</b> or <b>interview</b> to schedule an interview for student. First add <b>Student</b> and then <b>Interview</b> to schedule an interview.</p>
+  <% } %>
+</div>
+</div>

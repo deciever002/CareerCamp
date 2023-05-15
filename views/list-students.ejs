@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="/css/list-students.css" />
+<div class="card-wrapper">
+  <% if(locals.students.length > 0) { %> <% locals.students.forEach(function(item) { %>
+  <div class="card">
+    <div class="card-header">
+      <h2><%= item.name %></h2>
+      <hr />
+    </div>
+    <div class="card-content">
+      <p><span class="label">College: </span><%= item.college %></p>
+      <% if(item.status == 'not_placed') { %>
+      <p>
+        <span class="label">Status: </span><span class="badge badge-red">Not Placed</span>
+      </p>
+      <% } else { %>
+      <p>
+        <span class="label">Status: </span><span class="badge badge-green">Placed</span>
+      </p>
+      <% } %>
+      <p><span class="label">Batch: </span><%= item.batch %></p>
+      <p><span class="label">ID: </span><%= item.id %></p>
+      <p><span class="label">Scores: </span></p>
+      <ul>
+        <li>React: <%= item.courseScores.reactScore %></li>
+        <li>Web Development: <%= item.courseScores.webDScore %></li>
+        <li>DSA: <%= item.courseScores.dsaScore %></li>
+      </ul>
+      </p>
+    </div>
+  </div>
+  <% }) } else { %>
+    <div style="margin: auto" class="card">
+      <div class="card-header">
+        <h1>No Students........</h1>
+      </div>
+    </div>
+    <% } %>
+</div>

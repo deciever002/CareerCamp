@@ -1,0 +1,42 @@
+.card {
+  width: auto;
+  margin: 10px;
+  background-color: #007bff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 5px 3px 10px rgb(202, 200, 200);
+  font-family: Arial, sans-serif;
+  color: black;
+}
+    
+  .card-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .card-content {
+    margin-bottom: 20px;
+  }
+  
+  .company-name {
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  .student-name {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  
+
+  .interviews-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+  }
+
+  
+  .card:hover{
+    background-color: #62aeff;
+    cursor: pointer;
+  }
