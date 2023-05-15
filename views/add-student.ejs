@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="/css/add-student.css">
+<div class="wrapper">
+<div class="form-container">
+  <h1>Student Details</h1>
+  <form action="/student/create-student" method="post">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+    </div>
+    <div class="form-group">
+      <label for="college">College:</label>
+      <input type="text" id="college" name="college" required />
+    </div>
+    <div class="form-group">
+      <label for="batch">Batch:</label>
+      <select id="batch" name="batch" required>
+        <option value="A1" selected>A1</option>
+        <option value="A2">A2</option>
+        <option value="A3">A3</option>
+      </select>    </div>
+    <div class="form-group">
+      <label for="react-score">React Score:</label>
+      <input type="number" id="react-score" name="reactScore" min="0" max="100" required
+      />
+    </div>
+    <div class="form-group">
+      <label for="webd-score">Web Development Score:</label>
+      <input type="number" id="webd-score" name="webDScore" min="0" max="100" required />
+    </div>
+    <div class="form-group">
+      <label for="dsa-score">DSA Score:</label>
+      <input type="number" id="dsa-score" name="dsaScore" min="0" max="100" required />
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+</div>
+</div>

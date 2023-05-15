@@ -1,0 +1,58 @@
+.signin-card-wrapper{
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signin-card {
+    width: 300px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .signin-card h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .signin-card form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f7f7f7;
+  }
+  
+  .signin-card form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .signin-card form button:hover {
+    background-color: #555;
+  }
+  
+  .signin-card p {
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+  }
+  
+  .signin-card p a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .signin-card p a:hover {
+    text-decoration: underline;
+  }

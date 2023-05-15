@@ -1,0 +1,20 @@
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .footer-links .footer-link {
+    margin-right: 10px;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer-copyright {
+    margin-top: 10px;
+  }

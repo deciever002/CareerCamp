@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+<link rel="stylesheet" href="/css/list-interviews.css">
+<div class="interviews-wrapper">
+  <% if(locals.all_interviews.length > 0) { %> <% locals.all_interviews.forEach(function(interview) { %>
+  <a class="clickable-card" href="/interview/<%= interview._id %>">
+    <div class="card">
+      <div class="card-header">
+        <h1><%= interview.companyName%></h1>
+        <hr />
+      </div>
+      <div class="card-content">
+        <p>Date: <i class="fa-solid fa-calendar-days">&nbsp;</i><%= interview.date %></p>
+      </div>
+    </div>
+  </a>
+  <% }) } else { %>
+  <div style="margin: auto" class="card">
+    <div class="card-header">
+      <h1>No Interviews........</h1>
+    </div>
+  </div>
+  <% } %>
+</div>
+<script src="https://kit.fontawesome.com/b74d1ae148.js" crossorigin="anonymous"></script>

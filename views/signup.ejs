@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="/css/signup.css">
+<div class="signup-wrapper">
+    <div class="signup-card">
+        <h2>Sign Up</h2>
+        <form action="/user/create" method="post">
+          <input type="text" name="name" placeholder="Full name" pattern="[A-Za-z\s]+">
+          <input type="email" name="email" placeholder="Email">
+          <input type="password" name="password" minlength="4" maxlength="12" placeholder="Password">
+          <input type="password" name="confirmPassword" minlength="4" maxlength="12" placeholder="Confirm Password">
+          <button type="submit">Sign Up</button>
+        </form>
+    </div>
+</div>
+

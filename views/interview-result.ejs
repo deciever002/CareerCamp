@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+<link rel="stylesheet" href="/css/interview-result.css">
+<div class="interviews-wrapper">
+  <% if(locals.interview.results.length > 0) { %> 
+    <% locals.interview.results.forEach(function(result) { %>
+    <% let showResults = result.status == "DIDN'T ATTEMPT" ? false : true%>
+    <div class="card <%= showResults ? '' : 'disabled-div' %>">
+      <% if(!showResults) { %>
+      <div class="overlay">
+        <p class="message">Schedule an Interview First!</p>
+      </div>
+      <% } %>
+      <div class="card-content">
+        <p><i class="fa-solid fa-id-badge"></i></i>&nbsp;&nbsp;<b><%= result.student.id %></b></p>
+        <p><i class="fa-solid fa-signature"></i>&nbsp;&nbsp;<b><%= result.student.name %></b></p>
+        <div class="buttons">
+          <% if(result.status == 'PASS') { %>
+            <span class="badge badge-green">Passed Interview</span>
+          <% } else if(result.status == 'FAIL') { %>
+            <span class="badge badge-red">Failed Interview</span>
+          <% } else { %>
+            <a href="/student/selected/<%= result.student._id %>/<%= interview._id %>" class="button btn-success"><i class="fa-solid fa-check"></i>&nbsp;Selected</a>
+            <a href="/student/rejected/<%= result.student._id %>/<%= interview._id %>" class="button btn-danger"><i class="fa-sharp fa-solid fa-xmark"></i>&nbsp;Rejected</a>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  <% }) %>
+  <% } else { %>
+  <div style="margin: auto" class="card">
+    <div class="card-header">
+      <h1>No Students are interviewing with this company........</h1>
+    </div>
+  </div>
+  <% } %>
+</div>
+<script src="https://kit.fontawesome.com/b74d1ae148.js" crossorigin="anonymous"></script>
