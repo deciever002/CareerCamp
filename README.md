@@ -28,4 +28,4 @@ npm start
 
 # Deployment
 
-For quicker use you can access the app directly by using this website: 
+For quicker use you can access the deployed site: https://career-camp-jkir.onrender.com/ 
