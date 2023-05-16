@@ -26,7 +26,7 @@ app.use(express.static('./assets'));
 
 //Creates a Persistent session in the db.
 const sessionStore = MongoStore.create({
-    mongoUrl: `mongodb://${process.env.DB_HOST}:${process.env.DB_PORT}/CarrerCamp`
+    mongoUrl: process.env.CONNECTION_STRING
 })
 
 //create a session and store that session details in mongo db with connect mongo

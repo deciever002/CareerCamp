@@ -2,7 +2,7 @@
 const mongoose = require('mongoose');
 
 // Connect to MongoDB for retrieval of documents
-mongoose.connect(`mongodb://${process.env.DB_HOST}:${process.env.DB_PORT}/CarrerCamp`, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.CONNECTION_STRING, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
     //Connected to mongoose database.
     console.log('Connected to MongoDB');
