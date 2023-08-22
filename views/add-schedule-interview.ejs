@@ -51,7 +51,7 @@
 <script>
   const form = document.querySelectorAll('form');
   form.forEach((formEl) => {
-    formEl.addEventListener('click',() => {
+    formEl.addEventListener('submit',() => {
       document.getElementById('add-interview').disabled = true;
       document.getElementById('schedule-interview').disabled = true;
     })
