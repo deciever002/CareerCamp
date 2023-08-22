@@ -40,8 +40,8 @@
   const studentForm = document.getElementById('add-student-form');
   studentForm.addEventListener('submit',() => {
     const studentAddBtn = document.getElementById('add-student-btn');
+    studentAddBtn.disabled = true;
     studentAddBtn.style.pointerEvents = 'none';
     studentAddBtn.style.cursor = 'not-allowed';
-    studentAddBtn.disabled = true;
   })
 </script>
