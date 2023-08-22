@@ -2,7 +2,7 @@
 <div class="wrapper">
 <div class="form-container">
   <h1>Student Details</h1>
-  <form action="/student/create-student" method="post">
+  <form id="add-student-form" action="/student/create-student" method="post">
     <div class="form-group">
       <label for="name">Name:</label>
       <input type="text" id="name" name="name" required />
@@ -31,7 +31,14 @@
       <label for="dsa-score">DSA Score:</label>
       <input type="number" id="dsa-score" name="dsaScore" min="0" max="100" required />
     </div>
-    <button type="submit">Submit</button>
+    <button id="add-student-btn" type="submit">Submit</button>
   </form>
 </div>
 </div>
+
+<script>
+  const studentForm = document.getElementById('add-student-form');
+  studentForm.addEventListener('submit',() => {
+    document.getElementById('add-student-btn').disabled = true;
+  })
+</script>
