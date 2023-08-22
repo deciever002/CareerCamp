@@ -4,6 +4,11 @@ Welcome to the documentation for Career Camp, a web application built on Node.js
 
 Live at: https://career-camp-jkir.onrender.com/
 
+Snapshots: 
+
+<img width="1440" alt="Screenshot 2023-08-22 at 5 51 28 PM" src="https://github.com/deciever002/CareerCamp/assets/112121338/ecd2a322-8feb-4bc3-9a76-40498b60bcb2">
+<img width="1439" alt="Screenshot 2023-08-22 at 5 51 56 PM" src="https://github.com/deciever002/CareerCamp/assets/112121338/0e6bb7b7-0b73-4162-b979-9a14db0b8d28">
+<img width="1439" alt="Screenshot 2023-08-22 at 5 51 41 PM" src="https://github.com/deciever002/CareerCamp/assets/112121338/48979f08-30f9-4186-acad-7ecce013a6b3">
 
 # Quick Start
 1. Install all the dependent modules in package.json using:
