@@ -47,3 +47,10 @@
   <% } %>
 </div>
 </div>
+
+<script>
+  const form = document.querySelector('form');
+  form.addEventListener('submit',() => {
+    document.getElementsByName('button').disabled = true;
+  })
+</script>
