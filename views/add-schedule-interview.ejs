@@ -12,7 +12,7 @@
       <label for="date">Date:</label>
       <input type="date" id="date" name="date" required />
     </div>
-    <button type="submit">Add Interview</button>
+    <button id="add-interview" type="submit">Add Interview</button>
   </form>
   <% } else { %>
     <p>There are no <b>students</b> to create an <b>interviw</b> first add students</p>
@@ -40,7 +40,7 @@
           <% }); %>
           </select>
       </div>
-      <button type="submit">Schedule Interview</button>
+      <button id="schedule-interview" type="submit">Schedule Interview</button>
     </form>
   <% } else { %>
     <p>There are either no <b>students</b> or <b>interview</b> to schedule an interview for student. First add <b>Student</b> and then <b>Interview</b> to schedule an interview.</p>
@@ -49,8 +49,11 @@
 </div>
 
 <script>
-  const form = document.querySelector('form');
-  form.addEventListener('submit',() => {
-    document.getElementsByName('button').disabled = true;
+  const form = document.querySelectorAll('form');
+  form.forEach((formEl) => {
+    formEl.addEventListener('click',() => {
+      document.getElementById('add-interview').disabled = true;
+      document.getElementById('schedule-interview').disabled = true;
+    })
   })
 </script>
