@@ -39,6 +39,9 @@
 <script>
   const studentForm = document.getElementById('add-student-form');
   studentForm.addEventListener('submit',() => {
-    document.getElementById('add-student-btn').disabled = true;
+    const studentAddBtn = document.getElementById('add-student-btn');
+    studentAddBtn.style.pointerEvents = 'none';
+    studentAddBtn.style.cursor = 'not-allowed';
+    studentAddBtn.disabled = true;
   })
 </script>
