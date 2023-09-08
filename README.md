@@ -1,6 +1,6 @@
 # Career Camp Web App Documentation
 
-Welcome to the documentation for Career Camp, a web application built on Node.js that is designed to convert incoming student data into CSV format and allow users to download it. This documentation will provide an overview of the app's architecture, technologies used, and how to set it up and use it.
+Welcome to the documentation for Career Camp, a web application built on Node.js that is designed to convert incoming student data into CSV format and allow users to download it. Users can schedule an interview for a student and student can register itself after the interview is schedule the user can either reject or select the candidate based on this whole report is generated of student which you can then download.This documentation will provide an overview of the app's architecture, technologies used, and how to set it up and use it.
 
 Live at: https://career-camp-jkir.onrender.com/
 
